@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "dev": "node build/dev-server.js",
+    "start": "node server.js",
+    "postinstall": "npm run build",
+    "build": "node build/build.js",
+    "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
     "apexcharts": "^3.19.2",
@@ -15,6 +17,7 @@
     "chart.js": "^2.9.3",
     "core-js": "^3.6.5",
     "jquery": "^3.5.1",
+    "express": "^4.17.1",
     "leaflet": "^1.6.0",
     "moment": "^2.26.0",
     "popper.js": "^1.16.1",
