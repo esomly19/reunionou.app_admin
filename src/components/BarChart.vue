@@ -55,7 +55,7 @@ export default {
   mounted() {
     let e = [];
     axios
-      .get("http://localhost:3000/log")
+      .get("https://warm-badlands-86536.herokuapp.com/log")
       .then(res => {
         res.data.map(function(value) {
           e.push(value);

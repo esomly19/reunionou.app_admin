@@ -50,7 +50,11 @@ export default {
     },
     searchUsers() {
       axios
-        .get("http://localhost:3000/users?page=" + this.page + "&size=10")
+        .get(
+          "https://warm-badlands-86536.herokuapp.com/users?page=" +
+            this.page +
+            "&size=10"
+        )
         .then(res => {
           console.log(res);
           this.count = res.data.count;

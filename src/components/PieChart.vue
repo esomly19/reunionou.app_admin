@@ -13,7 +13,7 @@ export default {
   methods: {},
   mounted() {
     axios
-      .get("http://localhost:3000/logs")
+      .get("https://warm-badlands-86536.herokuapp.com/logs")
       .then(res => {
         this.gradient = this.$refs.canvas
           .getContext("2d")

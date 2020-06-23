@@ -185,16 +185,19 @@ export default {
         this.state = 1;
       }
       axios
-        .put("http://localhost:3000/event/" + this.event.id, {
-          titre: this.event.titre,
-          description: this.event.description,
-          date: this.date,
-          etat: this.event.state,
-          x: this.positionCentre.lat,
-          y: this.positionCentre.lng,
-          adresse: this.adresse,
-          iduser: localStorage.id
-        })
+        .put(
+          "https://warm-badlands-86536.herokuapp.com/event/" + this.event.id,
+          {
+            titre: this.event.titre,
+            description: this.event.description,
+            date: this.date,
+            etat: this.event.state,
+            x: this.positionCentre.lat,
+            y: this.positionCentre.lng,
+            adresse: this.adresse,
+            iduser: localStorage.id
+          }
+        )
         .then(res => {
           console.log(res.data);
           this.$router.go(-1);

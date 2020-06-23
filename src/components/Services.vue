@@ -29,7 +29,7 @@ export default {
   methods: {
     checkApiup() {
       axios
-        .get("http://localhost:3000/")
+        .get("https://warm-badlands-86536.herokuapp.com/")
         .then(res => {
           if (res) {
             this.api = true;

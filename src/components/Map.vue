@@ -47,10 +47,12 @@ export default {
   },
   methods: {
     getEvents() {
-      axios.get("http://localhost:3000/evenenments").then(res => {
-        this.events = res.data;
-        console.log(res.data);
-      });
+      axios
+        .get("https://warm-badlands-86536.herokuapp.com/evenenments")
+        .then(res => {
+          this.events = res.data;
+          console.log(res.data);
+        });
     }
   },
   computed: {},
