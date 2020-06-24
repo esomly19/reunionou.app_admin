@@ -49,8 +49,17 @@ export default {
       this.searchUsers();
     },
     searchUsers() {
+      const config = {
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+          Accept: "application/json"
+        }
+      };
       axios
-        .get("https://warm-badlands-86536.herokuapp.com/users?page=1&size=10")
+        .get(
+          "https://warm-badlands-86536.herokuapp.com/users?page=1&size=10",
+          config
+        )
         .then(res => {
           console.log(res);
           this.count = res.data.count;
