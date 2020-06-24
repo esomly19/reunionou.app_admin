@@ -49,6 +49,7 @@ export default {
       this.searchUsers();
     },
     searchUsers() {
+      console.log("ee");
       const config = {
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
@@ -57,7 +58,7 @@ export default {
       };
       axios
         .get(
-          "http://warm-badlands-86536.herokuapp.com/users?page=1&size=10",
+          "https://warm-badlands-86536.herokuapp.com/users?page=1&size=10",
           config
         )
         .then(res => {
