@@ -58,7 +58,9 @@ export default {
       };
       axios
         .get(
-          "https://warm-badlands-86536.herokuapp.com/users?page=1&size=10",
+          "https://warm-badlands-86536.herokuapp.com/users?page=" +
+            this.page +
+            "&size=10",
           config
         )
         .then(res => {
