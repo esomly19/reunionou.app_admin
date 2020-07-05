@@ -191,7 +191,7 @@ export default {
             titre: this.event.titre,
             description: this.event.description,
             date: this.date,
-            etat: this.event.state,
+            etat: this.state,
             x: this.positionCentre.lat,
             y: this.positionCentre.lng,
             adresse: this.adresse,
