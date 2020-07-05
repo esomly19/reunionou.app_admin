@@ -195,7 +195,7 @@ export default {
             x: this.positionCentre.lat,
             y: this.positionCentre.lng,
             adresse: this.adresse,
-            iduser: localStorage.id
+            iduser: this.event.iduser
           }
         )
         .then(res => {
