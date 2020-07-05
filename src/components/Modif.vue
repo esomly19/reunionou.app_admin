@@ -31,7 +31,7 @@
         />
         <label class="custom-control-label" for="customSwitch1">Evénément {{check}}</label>
       </div>
-
+      <p>IDUSER : {{event.iduser}}</p>
       <div class="row">
         <l-map
           class="col-8"
